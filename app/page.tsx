@@ -3,8 +3,6 @@
 import { useEffect, useState } from "react"
 import { EmployeeCard } from "@/components/employee-card"
 import { SearchFilters } from "@/components/search-filters"
-import { SidebarTrigger } from "@/components/ui/sidebar"
-import { Separator } from "@/components/ui/separator"
 import { useHRStore } from "@/lib/store"
 import { fetchEmployees } from "@/lib/api"
 import { Skeleton } from "@/components/ui/skeleton"
@@ -29,12 +27,7 @@ export default function Dashboard() {
 
   if (loading) {
     return (
-      <div className="flex flex-col">
-        <header className="flex h-16 shrink-0 items-center gap-2 border-b px-4">
-          <SidebarTrigger className="-ml-1" />
-          <Separator orientation="vertical" className="mr-2 h-4" />
-          <h1 className="text-lg font-semibold">Dashboard</h1>
-        </header>
+      <div className="flex flex-col h-full">
         <div className="flex-1 p-6">
           <div className="space-y-6">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -51,14 +44,8 @@ export default function Dashboard() {
   }
 
   return (
-    <div className="flex flex-col">
-      <header className="flex h-16 shrink-0 items-center gap-2 border-b px-4">
-        <SidebarTrigger className="-ml-1" />
-        <Separator orientation="vertical" className="mr-2 h-4" />
-        <h1 className="text-lg font-semibold">HR Performance Dashboard</h1>
-      </header>
-
-      <div className="flex-1 p-6">
+    <div className="flex flex-col h-full">
+      <div className="flex-1 p-6 overflow-auto">
         <div className="space-y-6">
           <div>
             <h2 className="text-2xl font-bold mb-2">Employee Overview</h2>

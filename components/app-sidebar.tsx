@@ -1,8 +1,8 @@
 "use client"
 
-import { Home, Users, Bookmark, BarChart3, Settings, Link2, ExternalLink } from "lucide-react"
+import { Home, Users, Bookmark, BarChart3, LogOut, ExternalLink } from "lucide-react"
 import Link from "next/link"
-import { usePathname } from "next/navigation"
+import { usePathname, useRouter } from "next/navigation"
 import {
     Sidebar,
     SidebarContent,
@@ -16,13 +16,12 @@ import {
     SidebarFooter,
 } from "@/components/ui/sidebar"
 import { ThemeToggle } from "@/components/theme-toggle"
+import { UserMenu } from "@/components/user-menu"
+import { Button } from "@/components/ui/button"
+import { useAuthStore } from "@/lib/auth-store"
+import { Poppins } from "next/font/google"
 
-import { Inter, Playfair_Display, Raleway, Poppins } from "next/font/google";
-
-const inter = Inter({ subsets: ["latin"] });
-const playfair = Playfair_Display({ subsets: ["latin"], weight: "600" });
-const raleway = Raleway({ subsets: ["latin"], weight: "600" });
-const poppins = Poppins({ subsets: ["latin"], weight: "600" });
+const poppins = Poppins({ subsets: ["latin"], weight: "600" })
 
 const menuItems = [
     {
@@ -44,6 +43,13 @@ const menuItems = [
 
 export function AppSidebar() {
     const pathname = usePathname()
+    const { logout, isAuthenticated } = useAuthStore()
+    const router = useRouter()
+
+    const handleSignOut = () => {
+        logout()
+        router.push("/login")
+    }
 
     return (
         <Sidebar>
@@ -57,6 +63,13 @@ export function AppSidebar() {
                         <span className="text-xs text-muted-foreground">Performance Tracker</span>
                     </div>
                 </div>
+
+                {/* Show user menu in header when authenticated */}
+                {isAuthenticated && (
+                    <div className="px-2 pt-2">
+                        <UserMenu />
+                    </div>
+                )}
             </SidebarHeader>
             <SidebarContent>
                 <SidebarGroup>
@@ -79,7 +92,18 @@ export function AppSidebar() {
             </SidebarContent>
             <SidebarFooter>
                 <div className="flex flex-col gap-3 px-2 py-3">
-                    
+                    {/* Only show sign out button when authenticated */}
+                    {isAuthenticated && (
+                        <Button
+                            variant="ghost"
+                            className="w-full text-rose-600 dark:text-rose-400 justify-start gap-2 hover:text-foreground hover:bg-destructive/10"
+                            onClick={handleSignOut}
+                        >
+                            <LogOut className="h-4 w-4" />
+                            <span>Sign Out</span>
+                        </Button>
+                    )}
+
                     <div className="flex justify-center">
                         <ThemeToggle />
                     </div>
