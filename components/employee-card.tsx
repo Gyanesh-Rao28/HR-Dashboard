@@ -67,7 +67,7 @@ export function EmployeeCard({ employee }: EmployeeCardProps) {
                 </div>
             </CardContent>
 
-            <CardFooter className="flex gap-2 p-6 pt-0">
+            <CardFooter className="flex flex-wrap gap-2 p-6 pt-0">
                 <Button asChild variant="outline" size="sm">
                     <Link href={`/employee/${employee.id}`}>
                         <Eye className="h-4 w-4 mr-1" />
