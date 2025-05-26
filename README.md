@@ -16,7 +16,7 @@ A modern HR management dashboard built with Next.js, designed to streamline huma
 
 ### 🔐 Login
 ![Login](./screenshots/Login.png)
-*Secure authentication interface for HR system access*
+*Mock authentication interface for HR system access*
 
 ### 🏠 Dashboard Overview
 ![Dashboard Overview](./screenshots/Home.png)
@@ -27,7 +27,7 @@ A modern HR management dashboard built with Next.js, designed to streamline huma
 *Comprehensive employee profile management with detailed information and records*
 
 ### 🔖 Bookmarks
-![Employee Bookmarks](./screenshots/bookmark.png)
+![Employee Bookmarks](./screenshots/Bookmark.png)
 *Quick access to frequently used employee profiles and important HR documents*
 
 ### 📊 Analytics & Reports
