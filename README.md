@@ -97,7 +97,6 @@ Make sure you have the following installed on your system:
 - **Framework**: [Next.js](https://nextjs.org/) - React framework for production
 - **Language**: TypeScript/JavaScript
 - **Styling**: CSS/Tailwind CSS (specify your actual styling solution)
-- **Font**: Geist font family
 - **Deployment**: [Vercel Platform](https://vercel.com/)
 
 ## 📁 Project Structure
