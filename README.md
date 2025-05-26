@@ -14,35 +14,35 @@ A modern HR management dashboard built with Next.js, designed to streamline huma
 
 ## 📸 Screenshots
 
-### Login
+### 🔐 Login
 ![Login](./screenshots/Login.png)
-*Main dashboard showing key HR metrics and analytics*
+*Secure authentication interface for HR system access*
 
-### Dashboard Overview
+### 🏠 Dashboard Overview
 ![Dashboard Overview](./screenshots/Home.png)
-*Main dashboard showing key HR metrics and analytics*
+*Main dashboard displaying key HR metrics, analytics, and system overview*
 
-### Employee Details
+### 👤 Employee Details
 ![Employee Details](./screenshots/employeeDetails.png)
-*Main dashboard showing key HR metrics and analytics*
+*Comprehensive employee profile management with detailed information and records*
 
-### Bookmarks
+### 🔖 Bookmarks
 ![Employee Bookmarks](./screenshots/bookmark.png)
-*Employee list and profile management interface*
+*Quick access to frequently used employee profiles and important HR documents*
 
-### Analytics & Reports
-## View - 01
-![Analytics](./screenshots/analytics01.png)
-*Detailed analytics and reporting features*
+### 📊 Analytics & Reports
 
-## View - 02
-![Analytics](./screenshots/analytics02.png)
-*Detailed analytics and reporting features*
+#### View 01 - Performance Metrics
+![Analytics View 1](./screenshots/analytics01.png)
+*Employee performance analytics and productivity insights*
 
-## View - 03
-![Analytics](./screenshots/analytics03.png)
-*Detailed analytics and reporting features*
+#### View 02 - Departmental Overview
+![Analytics View 2](./screenshots/analytics02.png)
+*Department-wise statistics and comparative analysis*
 
+#### View 03 - Trend Analysis
+![Analytics View 3](./screenshots/analytics03.png)
+*Historical data trends and predictive HR analytics*
 
 ## 🚀 Getting Started
 
@@ -108,5 +108,6 @@ HrDashboard/
 ├── components/          # Reusable components
 ├── public/             # Static assets
 ├── screenshots/        # Project screenshots
+├── styles/            # Global styles
 └── README.md          # Project documentation
 ```
