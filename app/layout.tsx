@@ -4,6 +4,7 @@ import { Inter } from "next/font/google"
 import "./globals.css"
 import { ThemeProvider } from "@/components/theme-provider"
 import { AuthWrapper } from "@/components/auth-wrapper"
+import { SidebarTrigger } from "@/components/ui/sidebar"
 
 const inter = Inter({ subsets: ["latin"] })
 
@@ -29,7 +30,11 @@ export default function RootLayout({
         dark:[&::-webkit-scrollbar-thumb]:bg-neutral-500`}
       >
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
-          <AuthWrapper>{children}</AuthWrapper>
+          <AuthWrapper>
+            {children}
+            <SidebarTrigger 
+            className="h-10 w-10 fixed bottom-4 right-4 z-50 bg-amber-500 rounded-lg shadow-lg hover:shadow-xl transition-shadow" />
+          </AuthWrapper>
         </ThemeProvider>
       </body>
     </html>

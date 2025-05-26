@@ -148,7 +148,7 @@ export default function AnalyticsPage() {
     const primaryColors = {
         blue: "#1e40af",
         lightBlue: "#3b82f6",
-        navy: "#1e293b",
+        navy: "#008080",
         slate: "#475569",
         emerald: "#059669",
         teal: "#0d9488",
@@ -200,7 +200,7 @@ export default function AnalyticsPage() {
                     size: 16,
                     weight: "bold" as const,
                 },
-                color: "#1e293b",
+                color: "#008080",
             },
         },
         scales: {
@@ -263,7 +263,7 @@ export default function AnalyticsPage() {
                     size: 16,
                     weight: "bold" as const,
                 },
-                color: "#1e293b",
+                color: "#008080",
             },
         },
     }
@@ -316,7 +316,7 @@ export default function AnalyticsPage() {
                     size: 16,
                     weight: "bold" as const,
                 },
-                color: "#1e293b",
+                color: "#008080",
             },
         },
         scales: {
@@ -371,7 +371,7 @@ export default function AnalyticsPage() {
                     size: 16,
                     weight: "bold" as const,
                 },
-                color: "#1e293b",
+                color: "#008080",
             },
         },
         scales: {
@@ -401,8 +401,8 @@ export default function AnalyticsPage() {
     return (
         <div className="flex flex-col">
             <header className="flex h-16 shrink-0 items-center gap-2 border-b px-4">
-                <SidebarTrigger className="-ml-1" />
-                <Separator orientation="vertical" className="mr-2 h-4" />
+                {/* <SidebarTrigger className="-ml-1" />
+                <Separator orientation="vertical" className="mr-2 h-4" /> */}
                 <h1 className="text-lg font-semibold">Analytics Dashboard</h1>
             </header>
 
