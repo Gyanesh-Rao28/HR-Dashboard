@@ -33,7 +33,7 @@ export default function RootLayout({
           <AuthWrapper>
             {children}
             <SidebarTrigger 
-            className="h-10 w-10 fixed bottom-4 right-4 z-50 bg-amber-500 rounded-lg shadow-lg hover:shadow-xl transition-shadow" />
+              className="h-10 w-10 fixed bottom-8 right-8 z-50 bg-black text-white dark:bg-amber-500 rounded-lg shadow-lg hover:shadow-xl transition-shadow" />
           </AuthWrapper>
         </ThemeProvider>
       </body>
